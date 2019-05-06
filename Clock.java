@@ -9,15 +9,15 @@ import java.util.Date;
 
 public class Clock extends JPanel {
 
-    private final int SIZE;
-    private Color background;
-    private final int INDENT;
-    private final double CENTER;
-    private final double SECONDSIZE;
-    private final double MINUTESIZE;
-    private final double HOURSIZE;
-    private final double RADIUS;
-    private final Thread updater = new Thread(() -> {
+    protected final int SIZE;
+    protected Color background;
+    protected final int INDENT;
+    protected final double CENTER;
+    protected final double SECONDSIZE;
+    protected final double MINUTESIZE;
+    protected final double HOURSIZE;
+    protected final double RADIUS;
+    protected final Thread updater = new Thread(() -> {
         while (true){
             repaint();
             revalidate();
