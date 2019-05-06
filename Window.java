@@ -7,8 +7,8 @@ public class Window extends JFrame {
 
     public Window(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().add(new SingleClock(300), BorderLayout.EAST);
-        getContentPane().add(new SingleClock(300), BorderLayout.WEST);
+        getContentPane().add(SingleClock.getInstance(300), BorderLayout.EAST);
+        getContentPane().add(SingleClock.getInstance(300), BorderLayout.WEST);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
