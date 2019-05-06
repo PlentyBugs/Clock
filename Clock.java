@@ -33,7 +33,7 @@ public class Clock extends JPanel {
 
     public Clock(int size){
         this.SIZE = size;
-        INDENT = 5;
+        INDENT = size/50;
         CENTER = size/2.0;
         SECONDSIZE = 1;
         MINUTESIZE = 0.75;
@@ -65,7 +65,8 @@ public class Clock extends JPanel {
 
         for(int i = 1; i <= 12; i++){
             double alpha = (2*Math.PI/12.0)*i - Math.PI/2;
-            graphics2D.drawString(Integer.toString(i), (float)(SECONDSIZE*(RADIUS-5)*Math.cos(alpha))-INDENT, (float)(SECONDSIZE*(RADIUS-5)*Math.sin(alpha))+INDENT);
+            graphics2D.setFont(new Font("TimesRoman", Font.PLAIN, SIZE/16));
+            graphics2D.drawString(Integer.toString(i), (float)(SECONDSIZE*(RADIUS-SIZE/50.0)*Math.cos(alpha))-INDENT, (float)(SECONDSIZE*(RADIUS-SIZE/50.0)*Math.sin(alpha))+INDENT);
         }
 
         Date date = new Date();

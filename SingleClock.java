@@ -6,11 +6,11 @@ public class SingleClock extends Clock {
 
     private static SingleClock clock;
 
-    public SingleClock(int size) {
+    private SingleClock(int size) {
         super(size);
     }
 
-    public SingleClock(int size, Color color) {
+    private SingleClock(int size, Color color) {
         super(size, color);
     }
 
